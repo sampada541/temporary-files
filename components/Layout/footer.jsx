@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/footer.css";
+import styled from "styled-components";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <StyledFooter>
       <div className="footer-content">
         <div className="footer-column">
           <h3>ABOUT</h3>
@@ -44,8 +44,49 @@ const Footer = () => {
         </div>
       </div>
       <p className="footer-copy">&copy; 2023 SynthGad App. All rights reserved.</p>
-    </div>
+    </StyledFooter>
   );
 };
+
+const StyledFooter = styled.div`
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .footer-column {
+    flex: 1;
+  }
+  
+  .footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-copy {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+  }
+`;
 
 export default Footer;

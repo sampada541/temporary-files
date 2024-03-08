@@ -1,7 +1,8 @@
 import React from "react";
-import Footer from "./footer";
-import Header from "./header";
+import Footer from "./footer.jsx";
+import Header from "./header.jsx";
 import { Toaster } from "react-hot-toast";
+import {Helmet} from "react-helmet"; 
 
 const Layout = ({ children, title, description, keywords, author }) => {
   return (

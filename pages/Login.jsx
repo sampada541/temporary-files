@@ -162,14 +162,14 @@ const Login = () => {
         <div className="shape"></div>
       </div>
       <form onSubmit={handleSubmit}>
-        <h3>Login Here</h3>
-        <label htmlFor="username">Username</label>
-        <input type="text" placeholder="Email or Phone" id="username" value={emailOrPhone} onChange={(e) => setEmailOrPhone(e.target.value)} />
-        <label htmlFor="password">Password</label>
-        <input type="password" placeholder="Password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <button type="submit">Log In</button>
-        <Link to="/forgot-password" className="forgot-password">Forgot Password?</Link> {/* Link to the Forgot Password page */}
-      </form>
+  <h3>Login Here</h3>
+  <label htmlFor="username">Username</label>
+  <input type="text" placeholder="Email or Phone" id="username" value={emailOrPhone} onChange={(e) => setEmailOrPhone(e.target.value)} required />
+  <label htmlFor="password">Password</label>
+  <input type="password" placeholder="Password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+  <button type="submit">Log In</button>
+  <Link to="/forgot-password" className="forgot-password">Forgot Password?</Link> {/* Link to the Forgot Password page */}
+</form>
     </div>
   );
 };

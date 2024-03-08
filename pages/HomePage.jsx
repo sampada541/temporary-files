@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import Typewriter from "typewriter-effect";
 import "../styles/HomePage.css";
+//import Layout from '../components/Layout/Layout';
 
 function HomePage() {
   return (
+    //<Layout>
     <div>
       <div className="container">
         <h1 className="title">
@@ -19,11 +22,11 @@ function HomePage() {
         <div className="user-actions">
           <div className="patient-actions">
             <h2 className="action-title">Patients</h2>
-            <p className="action-description">If you are a patient, please <Link to="/register" style={{ color: 'white' }}>Register</Link> or <Link to="/login" style={{ color: 'white' }}>Login</Link> to schedule an appointment.</p>
+            <p className="action-description">If you are a patient, please <Link to="/patient-register" style={{ color: 'white' }}>Register</Link> or <Link to="/login" style={{ color: 'white' }}>Login</Link> to schedule an appointment.</p>
           </div>
           <div className="doctor-actions">
             <h2 className="action-title">Doctors</h2>
-            <p className="action-description">If you are a doctor, please <Link to="/register" style={{ color: 'white' }}>Register</Link> or <Link to="/login" style={{ color: 'white' }}>Login</Link> to view appointments.</p>
+            <p className="action-description">If you are a doctor, please <Link to="/doctor-register" style={{ color: 'white' }}>Register</Link> or <Link to="/login" style={{ color: 'white' }}>Login</Link> to view appointments.</p>
           </div>
           <div className="prediction-box">
             <Link to="/predict" className="prediction-link">
@@ -33,6 +36,7 @@ function HomePage() {
         </div>
       </div>
     </div>
+    //</Layout>
   );
 }
 
