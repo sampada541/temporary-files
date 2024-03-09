@@ -1,78 +1,52 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import toast from "react-hot-toast";
-import SearchInput from "../../components/Form/SearchInput";
-
-
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import { NavLink, Link } from "react-router-dom";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import "../../styles/header.css";
 
-const Header = () => {
-  const handleLogout = () => {
-    // Perform logout actions here
-    // For demonstration purposes, let's assume the user is logged out successfully
-    toast.success("Logout Successful"); // Display toast notification
-  };
-
+function NavScrollExample() {
   return (
-    <>
-      <nav className="navbar navbar-expand-lg fixed-top">
-        <div className="container-fluid">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+    <Navbar expand="lg" bg="dark" data-bs-theme="dark">
+      <Container fluid>
+        <Navbar.Brand>
+          <NavLink to="/">
+            <img src="images/logo.png" alt="Logo" className="custom-logo" />
+          </NavLink>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: "100px" }}
+            navbarScroll
           >
-            <span className="navbar-toggler-icon" />
-          </button>
-          <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <span className="navbar-brand">
-              ⚕ 
-            </span>
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <SearchInput />
-              </li>
-              <li className="nav-item">
-                <NavLink to="/" className="nav-link">
-                  Home
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/register" className="nav-link">
-                  Register
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/login" className="nav-link">
-                  Login
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/predict-disease" className="nav-link">
-                  Predict Disease
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/book-appointments" className="nav-link">
-                  Book Appointments
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <button className="nav-link">Schedule Your Appointment</button>
-              </li>
-              <li className="nav-item">
-                <button className="nav-link" onClick={handleLogout}>Logout</button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Form className="d-flex">
+              <Form.Control
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
+              />
+              <Button variant="outline-success">Search</Button>
+            </Form>
+            <NavDropdown title="Register" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="/patient-register">
+                Register as Patient
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/doctor-register">
+                Register as Doctor
+              </NavDropdown.Item>
+            </NavDropdown>{" "}
+            <Nav.Link href="/login">Login</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-};
+}
 
-export default Header;
+export default NavScrollExample;
