@@ -24,46 +24,11 @@ const Footer = () => {
                 Careers
               </Link>
             </li>
-            <li>
-              <Link to="#" className="footer-link">
-                SynthGad Stories
-              </Link>
-            </li>
-            <li>
-              <Link to="#" className="footer-link">
-                Press
-              </Link>
-            </li>
-            <li>
-              <Link to="#" className="footer-link">
-                SynthGad Wholesale
-              </Link>
-            </li>
-            <li>
-              <Link to="#" className="footer-link">
-                Corporate Information
-              </Link>
-            </li>
           </ul>
         </div>
         <div className="footer-column">
           <h3>HELP</h3>
           <ul>
-            <li>
-              <Link to="#" className="footer-link">
-                Payments
-              </Link>
-            </li>
-            <li>
-              <Link to="#" className="footer-link">
-                Shipping
-              </Link>
-            </li>
-            <li>
-              <Link to="#" className="footer-link">
-                Cancellation & Returns
-              </Link>
-            </li>
             <li>
               <Link to="#" className="footer-link">
                 FAQ
@@ -115,6 +80,7 @@ const Footer = () => {
 };
 
 const StyledFooter = styled.div`
+  margin-bottom: 10px;
   background-color: #333;
   color: #fff;
   padding: 30px 0;
