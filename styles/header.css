@@ -1,60 +1,12 @@
-/* Custom styles for the logo */
 .custom-logo {
-  width: 50px; /* Set the desired width */
+  width: 40px; /* Adjust width as needed */
   height: auto; /* Maintain aspect ratio */
-  margin-right: 10px; /* Adjust margin as needed */
+  margin-right: 10px;
 }
 
-/* Navbar styling */
-.navbar {
-  background-color: #043d74; /* Set the background color to navy */
-  display: flex;
-  justify-content: space-between; /* Align items evenly along the main axis */
-  align-items: center; /* Align items vertically in the center */
-}
+.navbar{
+  background-color: #000000;
 
-/* Navbar text styling */
-.navbar-brand,
-.nav-link,
-.navbar-toggler-icon {
-  color: white; /* Set the text color to white */
-}
 
-/* Navbar toggle button styling */
-.navbar-toggler {
-  border: 1px solid white; /* Set the border color to white */
-}
-
-/* Navbar search and search button styling */
-.form-control,
-.btn-outline-success {
-  color: white; /* Set the text color to white */
-}
-
-/* Navbar search input and button placeholder color */
-.form-control::placeholder {
-  color: white; /* Set the placeholder color to white */
-}
-
-/* Navbar search input border color */
-.form-control {
-  border-color: white; /* Set the border color to white */
-}
-
-/* Navbar search button border color */
-.btn-outline-success {
-  border-color: white; /* Set the border color to white */
-}
-
-/* Align items to the right */
-.navbar-nav {
-  display: flex;
-  align-items: center;
-}
-
-/* Navbar links and form controls to the right */
-.navbar-nav .nav-link,
-.navbar-nav .form-control,
-.navbar-nav .btn-outline-success {
-  margin-left: auto; /* Automatically use all available space to push items to the right */
+  /*background: #0009;*/
 }
