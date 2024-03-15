@@ -1,6 +1,10 @@
 
 body {
+<<<<<<< HEAD
   background-image: url('/public/images/back4.jpg');
+=======
+  background-color: #f6f6f7;
+>>>>>>> 1216347d3bf4ad0f393a1ccb152a3ade8509d7c0
   font-family: "Poppins", sans-serif;
   display: flex;
 }

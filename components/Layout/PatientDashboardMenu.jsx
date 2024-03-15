@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -107,12 +108,41 @@ const PatientDashboardMenu = () => {
             activeClassName="active"
           >
             View Appointments
+=======
+import React from "react";
+import { NavLink } from "react-router-dom";
+
+const PatientDashboardMenu = () => {
+  return (
+    <div>
+      <div className="text-center dashboard-menu">
+        <div className="list-group">
+          <h4>Dashboard</h4>
+          <NavLink
+            to="/dashboard/patient/profile"
+            className="list-group-item list-group-item-action"
+          >
+            Profile
+          </NavLink>
+          <NavLink
+            to="/dashboard/patient/appointments"
+            className="list-group-item list-group-item-action"
+          >
+            Appointments
+>>>>>>> 1216347d3bf4ad0f393a1ccb152a3ade8509d7c0
           </NavLink>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   
   );
 };
 
 export default PatientDashboardMenu;
+=======
+  );
+};
+
+export default PatientDashboardMenu;
+>>>>>>> 1216347d3bf4ad0f393a1ccb152a3ade8509d7c0

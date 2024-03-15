@@ -80,7 +80,11 @@ const Footer = () => {
 };
 
 const StyledFooter = styled.div`
+<<<<<<< HEAD
   margin-bottom: auto; /* Increase the bottom margin */
+=======
+  margin-bottom: 10px;
+>>>>>>> 1216347d3bf4ad0f393a1ccb152a3ade8509d7c0
   background-color: #333;
   color: #fff;
   padding: 30px 0;

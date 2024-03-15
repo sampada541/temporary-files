@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+=======
+import { Link } from 'react-router-dom'; 
+>>>>>>> 1216347d3bf4ad0f393a1ccb152a3ade8509d7c0
 import Layout from '../components/Layout/Layout';
 
 const Login = () => {
   const [emailOrPhone, setEmailOrPhone] = useState('');
   const [password, setPassword] = useState('');
+<<<<<<< HEAD
   const [error, setError] = useState('');
+=======
+>>>>>>> 1216347d3bf4ad0f393a1ccb152a3ade8509d7c0
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+<<<<<<< HEAD
     try {
       const res = await axios.post("https://cureconnect-backend.onrender.com/api/v1/auth/login", { // Assuming the API endpoint is '/api/login'
         emailOrPhone,
@@ -26,24 +34,49 @@ const Login = () => {
       console.error('Login error:', error);
       setError('Something went wrong. Please try again later.'); // Set error message for general error
     }
+=======
+    // Handle login submission
+    console.log('Login submitted:', {
+      emailOrPhone,
+      password
+    });
+    // Reset form fields
+    setEmailOrPhone('');
+    setPassword('');
+>>>>>>> 1216347d3bf4ad0f393a1ccb152a3ade8509d7c0
   };
 
   return (
     <Layout>
       <div className="login-container">
+<<<<<<< HEAD
         {/* CSS Styles */}
         <style>
           {`
             
+=======
+        <style>
+          {`
+            *,
+            *::before,
+            *::after {
+              padding: 0;
+              margin: 0;
+              box-sizing: border-box;
+            }
+>>>>>>> 1216347d3bf4ad0f393a1ccb152a3ade8509d7c0
 
             body {
               background-color: #000112;
               font-family: 'Poppins', sans-serif;
+<<<<<<< HEAD
 
  
               justify-content: center;
               align-items: center;
               background-size: cover;
+=======
+>>>>>>> 1216347d3bf4ad0f393a1ccb152a3ade8509d7c0
             }
 
             .login-container {
@@ -55,6 +88,44 @@ const Login = () => {
               align-items: center;
             }
 
+<<<<<<< HEAD
+=======
+            .background {
+              width: 330px; /* Adjust the width */
+              height: 420px; /* Adjust the height */
+              position: absolute;
+              transform: translate(-50%,-50%);
+              left: 50%;
+              top: 50%;
+            }
+
+            .background .shape {
+              height: 150px; /* Adjust the height */
+              width: 150px; /* Adjust the width */
+              position: absolute;
+              border-radius: 50%;
+            }
+
+            .shape:first-child {
+              background: linear-gradient(
+                #03E5B7,
+                #037ADE
+              );
+              left: -60px; /* Adjust the position */
+              top: -60px; /* Adjust the position */
+            }
+
+            .shape:last-child {
+              background: linear-gradient(
+                to right,
+                #037ADE,
+                #03E5B7
+              );
+              right: -20px; /* Adjust the position */
+              bottom: -60px; /* Adjust the position */
+            }
+
+>>>>>>> 1216347d3bf4ad0f393a1ccb152a3ade8509d7c0
             form {
               height: 420px; /* Adjust the height */
               width: 300px; /* Adjust the width */
@@ -143,7 +214,14 @@ const Login = () => {
             }
           `}
         </style>
+<<<<<<< HEAD
         {/* Login Form */}
+=======
+        <div className="background">
+          <div className="shape"></div>
+          <div className="shape"></div>
+        </div>
+>>>>>>> 1216347d3bf4ad0f393a1ccb152a3ade8509d7c0
         <form onSubmit={handleSubmit}>
           <h3>Login Here</h3>
           <label htmlFor="username">Username</label>

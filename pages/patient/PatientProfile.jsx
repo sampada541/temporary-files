@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+<<<<<<< HEAD
 import Layout from "./../../components/Layout/Layout";
 import axios from "axios";
 import PatientDashboardMenu from "../../components/Layout/PatientDashboardMenu";
@@ -8,6 +9,15 @@ const PatientProfile = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [updatedProfile, setUpdatedProfile] = useState({});
 
+=======
+import UserMenu from "../../components/Layout/PatientDashboardMenu";
+import Layout from "./../../components/Layout/Layout";
+import axios from "axios";
+
+const PatientProfile = () => {
+  const [profileData, setProfileData] = useState({});
+  
+>>>>>>> 1216347d3bf4ad0f393a1ccb152a3ade8509d7c0
   useEffect(() => {
     // Fetch patient profile data from the backend
     const fetchProfileData = async () => {
@@ -15,13 +25,18 @@ const PatientProfile = () => {
         const { data } = await axios.get("/api/patient/profile"); // Replace '/api/patient/profile' with your backend endpoint
         setProfileData(data);
       } catch (error) {
+<<<<<<< HEAD
         console.error("Error fetching patient profile:", error);
+=======
+        console.error('Error fetching patient profile:', error);
+>>>>>>> 1216347d3bf4ad0f393a1ccb152a3ade8509d7c0
       }
     };
 
     fetchProfileData();
   }, []);
 
+<<<<<<< HEAD
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setUpdatedProfile({
@@ -43,11 +58,14 @@ const PatientProfile = () => {
     }
   };
 
+=======
+>>>>>>> 1216347d3bf4ad0f393a1ccb152a3ade8509d7c0
   return (
     <Layout title={"Your Profile"}>
       <div className="container-fluid p-3 m-3 dashboard">
         <div className="row">
           <div className="col-md-3">
+<<<<<<< HEAD
             <PatientDashboardMenu />
           </div>
           <div className="col-md-9">
@@ -182,11 +200,49 @@ const PatientProfile = () => {
                     Edit Profile
                   </button>
                 )}
+=======
+            <UserMenu />
+          </div>
+          <div className="col-md-9">
+            <h1 className="text-center">Your Profile</h1>
+            <div className="border shadow p-3">
+              <div className="row mb-2">
+                <div className="col-md-3">Name:</div>
+                <div className="col-md-9">{profileData.name}</div>
+              </div>
+              <div className="row mb-2">
+                <div className="col-md-3">Phone:</div>
+                <div className="col-md-9">{profileData.phone}</div>
+              </div>
+              <div className="row mb-2">
+                <div className="col-md-3">Email:</div>
+                <div className="col-md-9">{profileData.email}</div>
+              </div>
+              <div className="row mb-2">
+                <div className="col-md-3">Gender:</div>
+                <div className="col-md-9">{profileData.gender}</div>
+              </div>
+              <div className="row mb-2">
+                <div className="col-md-3">Age:</div>
+                <div className="col-md-9">{profileData.age}</div>
+              </div>
+              <div className="row mb-2">
+                <div className="col-md-3">Location:</div>
+                <div className="col-md-9">{profileData.location}</div>
+              </div>
+              {/* Assuming 'photo' is a URL */}
+              <div className="row mb-2">
+                <div className="col-md-3">Photo:</div>
+                <div className="col-md-9">
+                  <img src={profileData.photo} alt="Patient" style={{ maxWidth: '100%', height: 'auto' }} />
+                </div>
+>>>>>>> 1216347d3bf4ad0f393a1ccb152a3ade8509d7c0
               </div>
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       <style>
         {`
           .profile-details {
@@ -245,6 +301,8 @@ const PatientProfile = () => {
           }
         `}
       </style>
+=======
+>>>>>>> 1216347d3bf4ad0f393a1ccb152a3ade8509d7c0
     </Layout>
   );
 };
